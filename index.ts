@@ -100,6 +100,7 @@ class Ogre {
       maxBuffer: this.limit * 10,
     }
 
+    opts.options.push("--config", "DXF_ENCODING", "UTF-8")
     if (b.targetSrs) opts.options.push("-t_srs", b.targetSrs)
     if (b.sourceSrs) opts.options.push("-s_srs", b.sourceSrs)
     if ("rfc7946" in b) opts.options.push("-lco", "RFC7946=YES")
